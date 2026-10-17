@@ -1,174 +1,103 @@
-\# 🩹 Wound Monitoring Agent
-
-
+🩹 Wound Monitoring Agent
 
 A YOLO-based wound segmentation and monitoring prototype built with Python and Streamlit.
 
-
-
-\## Overview
-
-
+Overview
 
 The Wound Monitoring Agent analyzes uploaded wound images using a trained YOLO segmentation model. It estimates wound area in pixels and compares measurements across multiple observations.
 
+Features
 
+YOLO-based wound segmentation
 
-\## Features
+Upload and analyze multiple wound images
 
+Automatic follow-up dates at seven-day intervals
 
+Wound area measurement in pixels
 
-\- YOLO-based wound segmentation
+Observation-to-observation percentage comparison
 
-\- Upload and analyze multiple wound images
+Progress graph and measurement summary dashboard
 
-\- Automatic follow-up dates at seven-day intervals
+Basic image-processing error handling
 
-\- Wound area measurement in pixels
+Technologies Used
 
-\- Observation-to-observation percentage comparison
+Python
 
-\- Progress graph and measurement summary dashboard
+Ultralytics YOLO
 
-\- Basic image-processing error handling
+PyTorch
 
+Streamlit
 
+Pillow
 
-\## Technologies Used
+NumPy
 
+Matplotlib
 
+Project Structure
 
-\- Python
-
-\- Ultralytics YOLO
-
-\- PyTorch
-
-\- Streamlit
-
-\- Pillow
-
-\- NumPy
-
-\- Matplotlib
-
-
-
-\## Project Structure
-
-
-
-```text
-
-wound\_monitoring\_agent/
-
+wound-monitoring-agent/
 ├── app.py
-
 ├── agent.py
-
 ├── monitoring.py
-
-├── wound\_area.py
-
-├── convert\_masks.py
-
+├── wound_area.py
+├── convert_masks.py
 ├── data.yaml
-
 ├── requirements.txt
-
 ├── README.md
-
 ├── .gitignore
+├── models/
+│   └── best.pt
+└── wound_progress.png
 
-└── wound\_progress.png
+Setup and Installation
 
-```
+Install Python and Git.
 
+Clone or download this repository.
 
+Open a terminal in the project folder.
 
-\## Setup and Installation
+Install the dependencies:
 
+pip install -r requirements.txt
 
-
-1\. Install Python.
-
-2\. Clone or download this repository.
-
-3\. Open a terminal in the project folder.
-
-4\. Install the dependencies:
-
-
-
-&#x20;  ```bash
-
-&#x20;  pip install -r requirements.txt
-
-&#x20;  ```
-
-
-
-5\. Place the trained model at:
-
-
-
-&#x20;  ```text
-
-&#x20;  models/best.pt
-
-&#x20;  ```
+Ensure the trained model is available at:
 
 models/best.pt
 
-6\. Start the application:
+Start the application:
 
+python -m streamlit run app.py
 
+How to Use
 
-&#x20;  ```bash
+Launch the Streamlit application.
 
-&#x20;  python -m streamlit run app.py
+Choose the number of observations.
 
-&#x20;  ```
+Select the first observation date.
 
+Upload wound images for the available observations.
 
+Click Analyze Wound Progress.
 
-\## How to Use
+Review the pixel measurements, percentage changes, and progress graph.
 
+Limitations
 
+Measurements are estimates in image pixels, not physical wound area in cm².
 
-1\. Launch the Streamlit application.
+Results depend on image quality and model segmentation accuracy.
 
-2\. Choose the number of observations.
+Changes in lighting, camera angle, distance, and positioning can affect measurements.
 
-3\. Select the first observation date.
+A change in measured area alone does not establish wound healing.
 
-4\. Upload the wound images for the available observations.
-
-5\. Click \*\*Analyze Wound Progress\*\*.
-
-6\. Review the pixel measurements, percentage changes, and progress graph.
-
-
-
-\## Limitations
-
-
-
-\- Measurements are estimates in image pixels, not physical wound area in cm².
-
-\- Results depend on image quality and model segmentation accuracy.
-
-\- Changes in lighting, camera angle, distance, and positioning can affect measurements.
-
-\- A change in measured area alone does not establish wound healing.
-
-
-
-\## Medical Disclaimer
-
-
+Medical Disclaimer
 
 This project is an educational prototype and is not a medical diagnostic device. It does not replace assessment or advice from a qualified healthcare professional.
-
-
-
