@@ -64,20 +64,21 @@ Open a terminal in the project folder.
 
 Install the dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
 Ensure the trained model is available at:
 
+```text
 models/best.pt
+```
 
 Start the application:
 
+```bash
 python -m streamlit run app.py
-
-How to Use
-
-Launch the Streamlit application.
-
+```
 Choose the number of observations.
 
 Select the first observation date.
