@@ -1,0 +1,29 @@
+
+venv/
+__pycache__/
+*.py[cod]
+*.tmp
+
+# Local backups
+app_backup.py
+app_before_dashboard.py
+app_step2_backup.py
+app_step3_backup.py
+app.p.txt
+
+# Dataset and generated training outputs
+dataset/
+runs/
+
+# Local monitoring images
+monitoring/
+test_images/
+
+# Local model weights
+yolo26n.pt
+yolo26n-seg.pt
+
+# OS files
+.DS_Store
+Thumbs.db
+bus.jpg

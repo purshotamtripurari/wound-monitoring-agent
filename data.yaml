@@ -1,0 +1,7 @@
+path: C:/Users/Dell/wound_monitoring_agent/dataset
+
+train: images/train
+val: images/validation
+
+names:
+  0: wound
