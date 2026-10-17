@@ -4,3 +4,4 @@ torch
 Pillow
 matplotlib
 numpy
+opencv-python
